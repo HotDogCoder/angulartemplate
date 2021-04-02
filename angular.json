@@ -25,7 +25,17 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/styles/background-color.css",
+              "src/styles/border-color.css",
+              "src/styles/display.css",
+              "src/styles/flex.css",
+              "src/styles/grid.css",
+              "src/styles/margin.css",
+              "src/styles/padding.css",
+              "src/styles/position.css",
+              "src/styles/text-color.css",
+              "src/styles/width-height.css"
             ],
             "scripts": []
           },

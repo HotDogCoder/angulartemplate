@@ -14,11 +14,19 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
+import { HomeComponent } from './pages/home/home.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { HttpClientModule } from '@angular/common/http';
+import { TasksComponent } from './pages/tasks/tasks.component';
+import { NotifierModule } from './components/notifier/notifier.module';
+import { TablesModule } from './components/tables/tables.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    TasksComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,11 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     MatMenuModule,
     MatBadgeModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule,
+    HttpClientModule,
+    NotifierModule,
+    TablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
