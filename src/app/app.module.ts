@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TasksComponent } from './pages/tasks/tasks.component';
 import { NotifierModule } from './components/notifier/notifier.module';
 import { TablesModule } from './components/tables/tables.module';
+import { CustomFormsModule } from './components/custom-forms/custom-forms.module';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { TablesModule } from './components/tables/tables.module';
     MatGridListModule,
     HttpClientModule,
     NotifierModule,
-    TablesModule
+    TablesModule,
+    CustomFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

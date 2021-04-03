@@ -1,0 +1,53 @@
+<form [formGroup]="myForm">
+    {{ myForm.value | json }}
+    <hr>
+    <mat-form-field>
+        <input matInput placeholder="email" formControlName="email">
+    </mat-form-field>
+    <hr>
+    <p>Cell Phone</p>
+    <hr>
+    <div formGroupName="cellPhone">
+        <mat-form-field>
+            <input matInput placeholder="area" formControlName="area">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="prefix" formControlName="prefix">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="line" formControlName="line">
+        </mat-form-field>
+    </div>
+    <hr>
+    <p>Home Phone</p>
+    <hr>
+    <div formGroupName="homePhone">
+        <mat-form-field>
+            <input matInput placeholder="area" formControlName="area">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="prefix" formControlName="prefix">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="line" formControlName="line">
+        </mat-form-field>
+    </div>
+    <hr>
+    <p>Home Phone</p>
+    <hr>
+    <div formArrayName="tasks">
+        <div *ngFor="let task of taskForms.controls; let i = index" [formGroupName]="i">
+            <mat-form-field>
+                <input matInput placeholder="message" formControlName="message">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="type" formControlName="type">
+            </mat-form-field>
+            <span style="min-width: 20px;"></span>
+            <button mat-raised-button color="warn" (click)="deleteTask(i)">delete</button>
+        </div>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" (click)="addTask()">New task</button>
+    </div>
+</form>
