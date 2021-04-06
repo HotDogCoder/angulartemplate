@@ -3,11 +3,23 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>APP NAME</mat-toolbar>
+    <mat-toolbar>
+      <mat-icon mat-list-icon>assignment</mat-icon>
+      APP NAME
+    </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/home">Home</a>
-      <a mat-list-item routerLink="/tasks">Tasks</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item routerLink="/home" (click)="drawer.toggle()">
+        Home
+        <mat-icon mat-list-icon>assignment</mat-icon>
+      </a>
+      <a mat-list-item routerLink="/tasks" (click)="drawer.toggle()">
+        Tasks
+        <mat-icon mat-list-icon>assignment</mat-icon>
+      </a>
+      <a mat-list-item routerLink="/users" (click)="drawer.toggle()">
+        Users
+        <mat-icon mat-list-icon>assignment</mat-icon>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

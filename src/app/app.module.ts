@@ -21,6 +21,7 @@ import { TasksComponent } from './pages/tasks/tasks.component';
 import { NotifierModule } from './components/notifier/notifier.module';
 import { TablesModule } from './components/tables/tables.module';
 import { CustomFormsModule } from './components/custom-forms/custom-forms.module';
+import { UsersModule } from './pages/users/users.module';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CustomFormsModule } from './components/custom-forms/custom-forms.module
     HttpClientModule,
     NotifierModule,
     TablesModule,
-    CustomFormsModule
+    CustomFormsModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

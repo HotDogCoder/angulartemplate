@@ -1,0 +1,22 @@
+<div class="flex flex-wrap w-full relative">
+  <h1 class="mat-h1 p-05">Dashboard</h1>
+  <div class="w-full relative p-05">
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>
+          Tables
+          <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" xPosition="before">
+            <button mat-menu-item>Expand</button>
+            <button mat-menu-item>Remove</button>
+          </mat-menu>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="dashboard-card-content">
+        <app-table-users></app-table-users>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

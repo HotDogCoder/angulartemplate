@@ -72,15 +72,10 @@ export class FormSignUpComponent implements OnInit {
     console.log('zxczxczxcxz');
     this.loading = true;
     const formValue = this.myForm.value;
-    /*try {
-      await this.userService.sign_up(formValue);
-      this.loading = false;
-    } catch(err) {
-      console.log(err);
-    }*/
     this.userService.sign_up(formValue).subscribe(
       response => {
         console.log(response);
+        this.loading = false;
       },
       error => {
         console.log(error);

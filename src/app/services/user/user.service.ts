@@ -13,4 +13,8 @@ export class UserService {
     console.log(obj);
     return this.httpClient.post('http://localhost:3000/users', obj);
   }
+
+  get_users(obj: any) {
+    return this.httpClient.get('http://localhost:3000/users', obj);
+  }
 }
